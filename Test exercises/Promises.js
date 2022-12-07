@@ -28,7 +28,6 @@ pruebita()
 
 // setTimeout( loQueQuieroQueHaga, tiempoEnMS)
 
-
 function sumita(a, b){
     resultado = a + b;
     return new Promise(resolve =>{

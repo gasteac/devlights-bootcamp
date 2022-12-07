@@ -14,8 +14,6 @@ function myFunction({param1, param2, param3, param4}){
 
 myFunction({param1:1, param2:2, param3:3, param4:'hola'})
 
-
-
 //Funcion flecha
 
 const myFunction2=(param)=>{

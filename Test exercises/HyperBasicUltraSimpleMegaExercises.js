@@ -44,7 +44,6 @@ console.log(2 === '2');
 console.log(2 >= 2);
 console.log(2 != 3);
 
-
 // Condicionales
 
 if (2 === '2') {

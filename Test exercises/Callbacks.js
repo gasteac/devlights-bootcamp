@@ -10,7 +10,6 @@ function operacion(a,b,cb){
         cb(result) //cb es mi funcion callbacl
     }, 1000);
 }
-
 operacion(2, 3, callback)
 
 

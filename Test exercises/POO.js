@@ -18,5 +18,4 @@ Persona.mostrarNombre();
 
 const personaClase = new Persona();
 personaClase.mostrarEdad();
-
 //y ahora si me muestra porque la instancia en una variable

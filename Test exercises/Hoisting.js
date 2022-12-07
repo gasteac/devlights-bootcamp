@@ -27,6 +27,5 @@ var variable = 5
 
 console.log(variable1)
 const variable1 = 'hola'
-
 //y ahi como ves, se rompe todo
 

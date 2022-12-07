@@ -17,7 +17,6 @@ gaston.mostrarEdad()
 console.log(gaston)
 console.log(gaston.direccion)
 console.log(gaston.direccion.lugar)
-
 //Formas de copiar un objeto
 
 //Si lo copio asi tal cual, copia la referencia:

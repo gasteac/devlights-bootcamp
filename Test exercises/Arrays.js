@@ -113,7 +113,7 @@ console.log(multiDimArrayToFlat.join(' '));
 
 console.log(multiDimArrayToFlat.join(' - '));
 
-// #############
+// ############
 
 // Convertir un string a un arreglo separado por el separador indicado en el split
 
