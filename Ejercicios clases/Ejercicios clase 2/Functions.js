@@ -1,7 +1,7 @@
-//Funcion LINEAL y funcion FLECHHA
+//Funcion LITERAL y funcion FLECHHA
 
 
-//Funcion lineal
+//Funcion literal
 
 function myFunction({param1, param2, param3, param4}){
     console.log('params1', param1)
