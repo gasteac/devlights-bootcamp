@@ -58,11 +58,11 @@ const sum = (...args) => {
   console.log(sum(1,2,3,4));
   console.log(sum(5));
 
-  // 8.Use the Spread Operator to Evaluate Arrays In-Place
+// 8.Use the Spread Operator to Evaluate Arrays In-Place
 
 const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
 let arr2;
-arr2 = [...arr1];  // Change this line
+arr2 = [...arr1];  
 console.log(arr2);
 
 // 9.Use Destructuring Assignment to Extract Values from Objects
@@ -100,9 +100,7 @@ let a = 8, b = 6;
 // 13.Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements
  
 function removeFirstTwo(list) {
-    // Only change code below this line
     const [,,...shorterList] = list; // Change this line
-    // Only change code above this line
     return shorterList;
   }
 const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -138,7 +136,7 @@ const result = {
   }
   const failuresList = makeList(result.failure);
 
-  // 16.Write Concise Object Literal Declarations Using Object Property Shorthand
+// 16.Write Concise Object Literal Declarations Using Object Property Shorthand
 
 const createPerson = (name, age, gender) => 
 ({name, age, gender});
