@@ -2,20 +2,14 @@ const http = require('http');
 const fs = require('fs');
 
 const server = http.createServer((req, res) => {
-    res.writeHead(200, 'exito', {'Content-type':'text/html'});
-    fs.readFile('./index.html', (error, data) => {
+    res.writeHead(200, 'EXITO', {'Content-type':'application/pdf'});
+    fs.readFile('parcial.pdf', (error, data) => {
         if (error) {
-            fs.readFile('./indexError.html', (error2, data2) => {
-                if (error2) {
-                   throw error2;
-                }
-                res.end(data2);
-            });
-        } else {
+            console.log('Error al leer el archivo', error);
+        }
         res.end(data);
-    }
     });
-    });
+})
 
 server.listen(3000,'localhost', (error) => {
     if (error) {
