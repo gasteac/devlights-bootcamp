@@ -15,7 +15,7 @@ server.get("/about", (req, res) => {
 })
 
 server.get("/:param1/:param2", (req, res) => {
-    res.send(`Mis parametros son: ${JSON.stringify(req.params)}. Mis query params son: ${JSON.stringify(req.query)}`);
+    res.send(`Mis parametros sonnnn: ${JSON.stringify(req.params)}. Mis query params son: ${JSON.stringify(req.query)}`);
 })
 
 server.listen(3000);
