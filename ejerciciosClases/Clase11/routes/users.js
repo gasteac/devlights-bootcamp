@@ -1,6 +1,5 @@
 const express = require("express");
 const usersModel = require("../models/users");
-
 const usersRoutes = express.Router();
 
 usersRoutes.get("/", async (req, res) => {
