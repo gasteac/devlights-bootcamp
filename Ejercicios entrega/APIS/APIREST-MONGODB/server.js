@@ -5,10 +5,21 @@ const mongoose = require("mongoose");
 const log = require("./middlewares/log")
 const authenticate = require("./middlewares/authentication");
 
+//Middleware a nivel app
 app.use(log)
 app.use(express.json());
 
+//Middleware a nivel ruta/s
 app.use("/api", authenticate, apiRoutes)
+
+app.get("/api", (req, res) => {
+    res.send("Bienvenido a la API");
+});
+
+app.get("/", (req, res) => {
+    res.send("Seccion no creada aun");
+});
+
 
 mongoose.set('strictQuery', true);
 
