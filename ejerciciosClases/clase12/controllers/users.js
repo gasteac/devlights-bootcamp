@@ -1,12 +1,7 @@
 import userRepository from "../repositories/users.js";
-import mailService from "../services/mail.js";
-
 
 export const getAllUsers = async (req, res) => {
   const users = await userRepository.getAllUsers();
-
-  // TODO: ENVIAR MAIL
-//   mailService.sendMail(user);
 
   res.status(200).json({ users });
 };
@@ -25,7 +20,7 @@ export const createUser = async (req, res) => {
   }
 };
 
-export const deleteUser = async (req, res) => {
+export const deleteUser = async(req, res) => {
   try {
     await userRepository.deleteUser(req.params.userId);
     res.status(200).json({ message: "User deleted" });
@@ -42,3 +37,24 @@ export const updateUser = async (req, res) => {
     res.status(400).json({ err });
   }
 };
+
+export const createUserTask = async (req, res) => {
+  try {
+    const tasks = await userRepository.createUserTask(req.body, req.params.userId)
+
+    res.json({ tasks })
+  } catch (error) {
+    res.status(500).json({ error });
+  }
+}
+
+  
+ export const getAllTasksByUserId = async (req, res) =>{
+    try{
+      const tasks = await userRepository.getAllTasksByUserId(req.params.userId)
+      res.json({tasks})
+    }catch(err){
+      res.status(400).json({ err })
+    }
+  }
+

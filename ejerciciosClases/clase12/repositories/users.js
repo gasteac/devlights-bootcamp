@@ -1,4 +1,6 @@
+import Task from "../models/task.js";
 import User from "../models/user.js";
+import roleRepository from "../repositories/roles.js"
 
 const getAllUsers = async (req, res) => {
   const users = await User.findAll();
@@ -7,7 +9,8 @@ const getAllUsers = async (req, res) => {
 };
 
 const getUserById = async (userId) => {
-  const user = await User.findByPk(userId);
+  const user = await User.findByPk(userId, 
+    {include: Role});
   //res.status(200).json({ user });
   return user;
 };
@@ -15,7 +18,8 @@ const getUserById = async (userId) => {
 const createUser = async (userData) => {
   try {
     const user = await User.create(userData);
-    //res.status(201).json({ user });
+    const role = await roleRepository.getRoleById(userData.roleId)
+    await user.addRole(role)
     return user
   } catch (err) {
     // res.status(400).json({ err });
@@ -48,10 +52,27 @@ const updateUser = async (userData, userId) => {
   }
 };
 
+const createUserTask = async(taskData, userId) =>{
+  const tasks = await Task.create({...taskData, UserId: userId});
+  return tasks
+}
+
+const getAllTasksByUserId = async(userId)=>{
+  const user = await User.findByPk(userId, {
+    include: {
+      model: Task,
+      as: "task"
+    }
+  });
+  return user;
+}
+
 export default {
     getAllUsers,
     getUserById,
     createUser,
     deleteUser,
-    updateUser
+    updateUser,
+    createUserTask,
+    getAllTasksByUserId
 }
