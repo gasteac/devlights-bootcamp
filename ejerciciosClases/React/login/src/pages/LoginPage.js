@@ -29,7 +29,7 @@ export function LoginPage(){
             <label className='LoginTitle'>Iniciar sesión</label>
             <input type='email' name='email' placeholder='Email' className='LoginInput' onChange={emailOnChange}/>
             <input type='password' name='passowrd' placeholder='Contraseña' className='LoginInput' onChange={passwordOnChange}/>
-            <button className='LoginButton' >Iniciar sesión</button>
+            <button className='LoginButton' type='submit'>Iniciar sesión</button>
             </form>
             <MostrarDatos mostrar={mostrar} email={email} password={password}/>
         </div>
