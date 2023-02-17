@@ -1,0 +1,46 @@
+.LoginForm{
+    margin-top: 24px;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 350px;
+}
+
+.LoginFormBottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.LoginForm label{
+    margin-bottom: 10px;
+}
+
+.LoginForm input{
+    margin-bottom: 11px;
+    border: 1px solid #E8E8E8;
+    border-radius: 5px;
+    min-height: 50px;
+}
+
+.RememberContainer{
+    display: flex;
+    align-items: center;
+    margin-top:10px;
+}
+
+.LoginButton{
+    background: #04C45C;
+    border-radius: 5px;
+    margin-top: 16px;
+    width: 100%;
+    height: 50px;
+    max-width: 350px;
+    border: none;
+    color:white;
+    font-weight: 700;
+    font-family: 'roboto';
+    font-size: 16px;
+    cursor: pointer;
+}
